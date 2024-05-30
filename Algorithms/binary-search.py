@@ -1,4 +1,10 @@
+#Binary search algorithm implementation in python
+
+#In this approach, the element is always searched in the middle of a portion of an array.
+
 #Binary search only works with ordered arrays
+
+#Time complexity: O(log n)  Increases one step each time data is doubled
 
 def binary_search(array,search_value):
     #lower_bound is the first value in the array, while upper_bound is the last value
@@ -20,18 +26,13 @@ def binary_search(array,search_value):
         elif search_value > value_at_midpoint:
             lower_bound = midpoint + 1
 
-    # If we reach here, then the element was not present
+    #If we reach here, then the element was not present
     return -1
     
 
-# Test array
+#Test array
 arr = [ 2, 3, 4, 10, 40 ]
 x = 10
  
-# Function call
+#Function call
 result = binary_search(arr, x)
- 
-if result != -1:
-    print("Element is present at index", str(result))
-else:
-    print("Element is not present in array")
